@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/TCFLogo.png" type="image/x-icon">
+    <title>TCF Registration</title>
+</head>
+<body>
+    
+    <img src="./images/TCFLogo.png" alt="">
+
+    <div class="form">
+        <form id="form">
+            <h2>Գրանցում</h2>
+    
+            <div class="name">
+                <label for="name">Անուն</label>
+                <input type="text" name="name" id="name">
+    
+                <label for="second_name">Ազգանուն</label>
+                <input type="text" name="second_name" id="second_name">
+            </div>
+    
+            <div class="email">
+                <label for="email">Էլ․ Հասցե</label>
+                <input type="email" name="email" id="email" oninput="Emailvalidation()">
+            </div>
+    
+            <input type="submit" value="Ուղարկել" id="button">
+        </form>
+
+            <div class="sanding">
+                <img src="./images/mass.svg" alt="">
+                    <div class="loader">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+            </div>
+    
+            <div class="send">
+                <img src="./images/ok.svg" alt="">
+                    <p>Գրանցումը ուղարկված է</p>
+            </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+    emailjs.init('tQCup-hXcaEh2y-0q')
+    </script>
+
+</body>
+</html>
