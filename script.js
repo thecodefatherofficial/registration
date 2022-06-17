@@ -12,55 +12,53 @@ function Emailvalidation(){
     }
 };      
 
+// window.addEventListener("load", function(){
 
+//     const btn = document.getElementById('button');
+//     btn.setAttribute('disabled', '')
 
+//     let inputName = document.getElementById('name').value;
+//     let inputSecondName = document.getElementById('second_name').value;
+//     let inputEmail = document.getElementById('email').value;
+//     let inputDev = document.getElementById('dev').value;
 
-// function sendmail() {
-//     let name = document.getElementById("name").value;
-//     let secondname = document.getElementById("second-name").value;
-//     let email = document.getElementById("email").value;
+//     document.getElementById('name').oninput = function(){
+//         if (inputName === ""){
+//             if (inputSecondName === ""){
+//                 if (inputEmail === ""){
+//                     if (inputDev === ""){
+//                         const btn = document.getElementById('button');
+//                         btn.removeAttribute('disabled', '')
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// })
 
-//         var contactParams = {
-//             name: name,
-//             second_name: secondname,
-//             email: email    
-//         };
+window.addEventListener("load", function(){
+    const btn = document.getElementById('button');
 
-//         emailjs.send('ervice_lw7h80i', 'template_2aooevw', contactParams).then(function (res) {
-//             setTimeout(() => {
-//                 document.querySelector('.sanding').innerHTML = `
-//                 `
-//             }, 2000);
-
-//             setTimeout(() => {
-//                 document.querySelector('.send').innerHTML = `
-//                 `
-//             }, 2000);
-//         })
-// };
-
-
-const btn = document.getElementById('button');
-
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
-
-
-   const serviceID = 'service_lw7h80i';
-   const templateID = 'template_2aooevw';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-        document.querySelector('form').style.display = 'none'
-        document.querySelector('.sanding').style.display = 'flex'
-        setTimeout(() => {
-            document.querySelector('.sanding').style.display = 'none';
-            document.querySelector('.send').style.display = 'flex'
-        }, 2000);      
-
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
+    document.getElementById('form')
+     .addEventListener('submit', function(event) {
+       event.preventDefault();
+    
+    
+       const serviceID = 'service_lw7h80i';
+       const templateID = 'template_2aooevw';
+    
+       emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            document.querySelector('form').style.display = 'none'
+            document.querySelector('.sanding').style.display = 'flex'
+            setTimeout(() => {
+                document.querySelector('.sanding').style.display = 'none';
+                document.querySelector('.send').style.display = 'flex'
+            }, 2000);      
+    
+        }, (err) => {
+          btn.value = 'Send Email';
+          alert(JSON.stringify(err));
+        });
     });
-});
+})

@@ -45,6 +45,7 @@ label{
     font-size: 12px;
     z-index: 1;
     position: relative;
+    padding: 0 5px;
     margin-left: 10px;
 }
 
@@ -54,12 +55,12 @@ input{
     padding: 7px 5px;
     border: 2px solid rgb(173, 0, 241);
     border-radius: 10px;
-    margin-top: -7px;
+    margin-top: -8px;
     margin-bottom: 15px;
     outline: none;
 }
 
-input[type="submit"]{
+button{
     width: 100%;
     padding: 7px 0;
     border-radius: 10px;
@@ -70,7 +71,7 @@ input[type="submit"]{
     cursor: pointer;
     margin-bottom: 0;
 }
-input[type="submit"]:hover{
+button:hover{
     background: rgb(173, 0, 241);
     color: #fff;
 }
