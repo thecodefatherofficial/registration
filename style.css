@@ -20,6 +20,12 @@ img{
     margin-bottom: 20px;
 }
 
+.end{
+    color: #fff;
+}
+.end img{
+    width: 300px;
+}
 .form{
     width: 90%;
     max-width: 300px;
@@ -27,6 +33,7 @@ img{
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 70px;
+    display: none;
 }
 
 .valid{
